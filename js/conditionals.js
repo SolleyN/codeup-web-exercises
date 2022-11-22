@@ -1,7 +1,17 @@
 "use strict";
 
 /* ########################################################################## */
-
+let city = "San Antonio"
+if (city == "Boston"){
+    console.log("The Cities is Boston");
+    console.log("Go Red Sox!");
+} else if (city == "San Antonio") {
+    console.log("The Cities is San Antonio");
+    console.log("Go Spurs Go!");
+}
+    else {
+    console.log("The condition is false");
+}
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
