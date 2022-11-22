@@ -28,7 +28,9 @@ function analyzeColor(colorName) {
     {
         return "Red is the color of a fire hydrant.";
     }
-    else if (colorName === "blue");
+    else if{
+
+     (colorName === "blue");
 
         return "blue is the color of the ocean.";
 } else if
