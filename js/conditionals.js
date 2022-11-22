@@ -22,6 +22,8 @@
  * console.logging the function's return value
  */
 function analyzeColor(colorName) {
+}
+
     let colorName = prompt("What is your color name?")
 
     if (colorName === "red");
