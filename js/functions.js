@@ -9,11 +9,14 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-console.log(sayHello("codeup"));
-function sayHello(name) {
-    let message = "Hello, " + name + "!";
+//console.log(sayHello("codeup"));
+//function sayHello(name) {
+    //let message = "Hello, " + name + "!";
+const sayHello = (name) => {
+    let message = `Hello, ${name}!`;
     return message;
 }
+console.log(sayHello("Codeup"));
 
 /**
  * TODO:
@@ -34,7 +37,7 @@ console.log(helloMessage);
  * console.
  */
 
-let myName = "Nickolas";
+let myName = `Nickolas`;
 
 console.log(sayHello(myName));
 
