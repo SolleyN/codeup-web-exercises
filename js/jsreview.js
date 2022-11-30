@@ -125,7 +125,9 @@ function isFive(input){
     return b;
 
     // Write a function, isShortWord, that takes in a string and returns the boolean value true if the passed argument is shorter than 5 characters. Return false otherwise.
-
+function isShortWord(){
+   if = input.slice(5)
+}
     // Write a function, isSameLength, that takes in two string inputs and returns the boolean value true if the passed arguments are the same length. Return false otherwise.
 
     // Write a function, getSmallerSegment, that takes in a string and a number input. The function should return a substring of the first argument that is as many characters long as the second argument in lowercase.
@@ -208,28 +210,43 @@ function isFive(input){
 
     // 1) Make a function called returnTwo() that returns the number 2 when called
     // ---Test this function with console.log(returnTwo())
+function returnTwo(input) {
+    return input=2;
+}
+    console.log(returnTwo())
 
 
 
     // 2) Make a function called returnName() that returns the string of your name
     // ---Test this function with console.log(returnName())
 
-
+function returnName(myName) {
+    return "myName";
+}
 
     // 3) Make a function called addThree() which takes in a number input and returns the number plus 3.
     // ---Test this function with console.log(addThree(5))
+function addThree(number) {
+    return number + 3;
+}
 
-
+    console.log(addThree());
 
     // 4) Make a function called sayString() which returns the string input passed in.
     // ---Test this function with console.log(sayString())
 
+function sayString(inputStr) {
+    return "inputStr";
+}
 
+    console.log(sayString());
 
     // 5) Make a function called sayHowdy() which console.logs the string "Howdy!"
     // ---Test this function by directly calling sayHowdy()
     // ---Remember this function does not need a defined return value
-
+function sayHowdy(input){
+    return input==howdy
+}
 
     // ======== CONDITIONALS (switch / ternary / with functions)
 
@@ -238,4 +255,9 @@ function isFive(input){
     // Example: abbrevToDay('mon') returns 'Monday'
 
 
+switch ()function abbreToday(inputChar){
+    inputChar == 'mon';
+        return 'Monday';
+} else {
 
+    }
