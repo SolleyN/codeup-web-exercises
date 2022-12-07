@@ -1,7 +1,7 @@
-alert("Welcome to my website!");
+console.log("Hello from external JavaScript");
 
-let favColor = prompt('What is your favorite color?');
-let part1 = "Great, ";
-let part2 = " is my favorite color, too!";
-let message = part1 + favColor + part2;
+// alert("Welcome to my Website!");
+
+let favColor = prompt("What is your favorite color?");
+let message = "Great, " + favColor + " is my favorite color too";
 alert(message);
