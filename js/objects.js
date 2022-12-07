@@ -11,11 +11,11 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-//     const person = {
-//         firstName: "Nickolas",
-//         lastName: "Solley"
-//     };
-// //     console.log(person);
+    const person = {
+        firstName: "Nickolas",
+        lastName: "Solley"
+    };
+    console.log(person);
 
     /**
      * TODO:
@@ -27,7 +27,8 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-
+// sayHello();
+//     console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
