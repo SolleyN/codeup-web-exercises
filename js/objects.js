@@ -15,7 +15,7 @@
         firstName: "Nickolas",
         lastName: "Solley"
     };
-    console.log(person);
+    console.log(person.firstName)
 
     /**
      * TODO:
@@ -27,8 +27,10 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-// sayHello();
-//     console.log(person.sayHello());
+    person.sayHello = function () {
+        return "Hello from " + this.firstName + " " + this.lastName ;
+    }
+    console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -44,11 +46,19 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    function discount (){
+
+
+
+
+
+    }
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
