@@ -28,7 +28,7 @@
      */
 
     person.sayHello = function () {
-        return "Hello from " + this.firstName + " " + this.lastName ;
+        return "Hello from " + this.firstName + " " + this.lastName; // `Hello from ${this.firstName} ${this.lastName}`;
     }
     console.log(person.sayHello());
 
