@@ -11,11 +11,11 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    const person = {
-        firstName: "Nickolas",
-        lastName: "Solley"
-    };
-    console.log(person.firstName);
+    // const person = {
+    //     firstName: "Nickolas",
+    //     lastName: "Solley"
+    // };
+    // console.log(person.firstName);
 
     /**
      * TODO:
@@ -27,10 +27,10 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    person.sayHello = function () {
-        return "Hello from " + this.firstName + " " + this.lastName; // `Hello from ${this.firstName} ${this.lastName}`;
-    }
-    console.log(person.sayHello());
+    // person.sayHello = function () {
+    //     return "Hello from " + this.firstName + " " + this.lastName; // `Hello from ${this.firstName} ${this.lastName}`;
+    // }
+    // console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -127,9 +127,9 @@
 
         }
     ];
-    console.log(books[0].title);
-    console.log(books[0].author.firstName);
-    console.log(books[0].author.lastName);
+    // console.log(books[0].title);
+    // console.log(books[0].author.firstName);
+    // console.log(books[0].author.lastName);
 
     /**
      * TODO:
@@ -156,13 +156,13 @@
      *      ...
      */
 
-    books.forEach(function(book, index) {
-        let bookNumber = index + 1;
-        let fullName = `${book.author.firstName} ${book.author.lastName}`;
-        let message = `Book # ${bookNumber}\nTitle: ${book.title}\nAuthor: ${fullName}\n---`;
-         console.log(message);
+     books.forEach(function(book, index) {
+         let bookNumber = index + 1;
+         let fullName = `${book.author.firstName} ${book.author.lastName}`;
+         let message = `Book # ${bookNumber}\nTitle: ${book.title}\nAuthor: ${fullName}\n---`;
+          console.log(message);
 
-    });
+     });
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -173,3 +173,23 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    let myAuthor ="Nickolas Solley";
+
+     let nickolasBook = createBook("Become a Coding God", "Nickolas Solley")
+    function createBook(title, author) {
+        let authorArray = author.split(' '); // ['Nickolas, Solley']
+        let bookObject = {
+            title: title,
+            author: {
+                firstName: authorArray[0],
+                lastName: authorArray[1]
+            },
+        }
+
+        return bookObject;
+    }
+    console.log( nickolasBook);
+    // let book2 = [
+    //     createBook('The Wizard Of Earthsea', 'Ursula Leguin'),
+    //     createBook('The Alchemist', 'Nicolas Flamel')
+    // ];
