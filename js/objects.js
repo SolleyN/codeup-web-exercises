@@ -46,16 +46,29 @@
      * and console.log the relevant messages for each person
      */
 
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
-
-    shoppers.forEach(function(amount) {
-        console.log(shoppers);
-    });
-
+//     let shoppers = [
+//         {name: 'Cameron', amount: 180},
+//         {name: 'Ryan', amount: 250},
+//         {name: 'George', amount: 320}
+//     ];
+//
+//     shoppers.forEach(function(shopper) {
+//         if (shopper.amount > 200) {
+//
+//             // Shoppers that get the discount
+//
+//             let savings = parseFloat(shopper.amount) *.12;
+//
+//             let total = parseFloat(shopper.amount) - (savings);
+// let amountAsACurrency = parseFloat(shopper.amount).toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+//             console.log(`${shopper.name} has a bill of ${shopper.amount.toLocaleString('en-US',{style: 'currency', currency: 'USD'})}, and received a 12% discount.\n ${shopper.name}'s discounted total is ${total.toLocaleString('en-US',{style: 'currency', currency: 'USD'})}, with a savings of ${savings.toLocaleString()}`);
+//
+//         } else {
+//             // Shoppers that don't get the discount
+//         } let remaining = parseFloat(200 - (shopper.amount)).toLocaleString('en-US',{style: 'currency', currency: 'USD'});
+//
+//         console.log(`${shopper.name} has a bill of ${amountAsACurrency} and did not receive a discount.`)
+//     });
 
 
 
@@ -75,6 +88,48 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    let books = [
+        {
+            title: "The Wizard Of Earthsea",
+            author: {
+                firstName: 'Ursula',
+                lastName: 'Leguin'
+            }
+        },
+        {
+            title: 'The Alchemist',
+            author: {
+                firstName: 'Nicolas',
+                lastName: 'Flamel'
+            }
+
+        },
+        { title: 'Harry Potter And The Order Of The Phoenix',
+            author: {
+             firstName: 'J.K.',
+                lastName: 'Rowling'
+            }
+
+        },
+        { title: 'The Magicians',
+            author: {
+             firstName: 'Leve',
+                lastName: 'Grossman'
+            }
+
+        },
+        { title: 'The Little Match Girl',
+            author: {
+            firstName: 'Hans',
+                lastName: 'Christian Anderson'
+            }
+
+        }
+    ];
+    console.log(books[0].title);
+    console.log(books[0].author.firstName);
+    console.log(books[0].author.lastName);
 
     /**
      * TODO:
@@ -101,6 +156,13 @@
      *      ...
      */
 
+    books.forEach(function(book, index) {
+        let bookNumber = index + 1;
+        let fullName = `${book.author.firstName} ${book.author.lastName}`;
+        let message = `Book # ${bookNumber}\nTitle: ${book.title}\nAuthor: ${fullName}\n---`;
+         console.log(message);
+
+    });
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
