@@ -15,7 +15,7 @@
         firstName: "Nickolas",
         lastName: "Solley"
     };
-    console.log(person.firstName)
+    console.log(person.firstName);
 
     /**
      * TODO:
@@ -52,13 +52,16 @@
         {name: 'George', amount: 320}
     ];
 
-    function discount (){
+    shoppers.forEach(function(amount) {
+        console.log(shoppers);
+    });
 
 
 
 
 
-    }
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
