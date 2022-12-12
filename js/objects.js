@@ -156,13 +156,13 @@
      *      ...
      */
 
-     books.forEach(function(book, index) {
-         let bookNumber = index + 1;
-         let fullName = `${book.author.firstName} ${book.author.lastName}`;
-         let message = `Book # ${bookNumber}\nTitle: ${book.title}\nAuthor: ${fullName}\n---`;
-          console.log(message);
-
-     });
+     // books.forEach(function(book, index) {
+     //     let bookNumber = index + 1;
+     //     let fullName = `${book.author.firstName} ${book.author.lastName}`;
+     //     let message = `Book # ${bookNumber}\nTitle: ${book.title}\nAuthor: ${fullName}\n---`;
+     //      console.log(message);
+     //
+     // });
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -188,8 +188,24 @@
 
         return bookObject;
     }
-    console.log( nickolasBook);
-    // let book2 = [
-    //     createBook('The Wizard Of Earthsea', 'Ursula Leguin'),
-    //     createBook('The Alchemist', 'Nicolas Flamel')
-    // ];
+
+    let book2 = [
+        createBook('The Wizard Of Earthsea', 'Ursula Leguin'),
+        createBook('The Alchemist', 'Nicolas Flamel'),
+        createBook('The Magicians', 'Leve Grossman'),
+        createBook('Harry Potter And The Order Of The Phoenix', 'J.K. Rowling'),
+        createBook('The Little Match Girl', 'Hans Christian Anderson')
+    ];
+    // console.log(book2);
+
+    function showBookInfo(book, index) {
+
+        let bookNumber = index + 1;
+        let fullName = `${book.author.firstName} ${book.author.lastName}`;
+        let message = `Book # ${bookNumber}\nTitle: ${book.title}\nAuthor: ${fullName}\n---`;
+        console.log(message);
+
+
+    }
+    book2.forEach(function)(book, index,);
+    showBookInfo(book, index);
