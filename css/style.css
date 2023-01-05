@@ -3,7 +3,7 @@
 fancy-header {
     color: gray;
     text-align: center;
-    color: dimgrey;
+    color: rgb(183, 9, 9);
     text-decoration: underline;
 }
 h1 {
@@ -11,7 +11,7 @@ h1 {
     text-align: center;
 }
 h2 {
-    color: dimgrey;
+    color: rgb(105, 105, 105);
     text-decoration: underline;
     text-align: center;
 
@@ -26,10 +26,9 @@ div {
     text-align:left;
 }
 body {
-    background-image: url("https://cdn.wallpapersafari.com/70/76/ohcQeA.jpg");
     background-repeat: repeat-y;
     font-family: Helvetica, sans-serif;
-    background-color: lightgrey;
+    background-color: rgb(56, 62, 169);
     /*text-align: center;*/
     /*margin: auto 0;*/
 }
