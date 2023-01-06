@@ -40,7 +40,7 @@ section {
     display: flex;
     margin-top:1em;
     margin-bottom:1em;
-    /*justify-content: center;*/
+    justify-content: center;
     /* enter needed declarations here */
 }
 
@@ -65,7 +65,7 @@ section:nth-of-type(1) div:last-child {
 
 .purple-box:nth-of-type(1) {
     flex-grow: 5;
-    /*width: 10em;*/
+    width: 10em;
     /* enter needed declarations here */
 }
 
