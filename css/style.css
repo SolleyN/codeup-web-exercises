@@ -1,6 +1,6 @@
 
 
-fancy-header {
+.fancy-header {
     color: gray;
     text-align: center;
     color: rgb(183, 9, 9);
@@ -20,7 +20,7 @@ div {
     text-align: center;
 
 }
-.center{
+center{
     width:200px;
     margin:0 auto;
     text-align:left;

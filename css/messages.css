@@ -5,3 +5,42 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
+:root {
+    --main-bg-blue:skyblue;
+    --main-bg-green:lightgreen;
+    --main-bg-yellow:yellow;
+    --main-bg-coral:lightcoral;
+    opacity:.5;
+}
+
+.message {
+    max-width:80%;
+    border-radius:.3em;
+    padding: .75em;
+    margin: .5em auto;
+    border: 1px solid darkgrey;
+}
+
+.message-info {
+    background-color: var(--main-bg-blue);
+    /*background-color: skyblue;*/
+    color: blue;
+    /*opacity: 0.5;*/
+}
+.message-success {
+    background-color: var(--main-bg-green);
+    color: green;
+    /*opacity: 0.5;*/
+}
+.message-warning {
+    background-color: var(--main-bg-yellow);
+    color: sandybrown;
+
+    /*opacity: 0.5;*/
+}
+.message-error {
+    background-color: var(--main-bg-coral);
+    color: darkred;
+    /*opacity: 0.5;*/
+}
