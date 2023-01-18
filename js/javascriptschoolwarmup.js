@@ -6,13 +6,19 @@
 
 // example data...
 
-function isDesirable(neighborhood){
+function fn(neighborhood) {
+    let schoolRatingTotal = 0;
+    neighborhood.schools.forEach(function (school) {
+        schoolRatingTotal = schoolRatingTotal + school.rating;
+    })
+    return Number(neighborhood.medianHomePrice) < 300000 && neighborhood.crimeRate.toLowerCase() === `low` && schoolRatingTotal >= 24;
+// function isDesirable(neighborhood){
 
-    if (neighborhood.medianHomePrice < 300000 && neighborhood.crimeRate < 3 && neighborhood.schools >= 24) {
-        return true;
-    }
-    return 
- false;
+//     if (neighborhood.medianHomePrice < 300000 && neighborhood.crimeRate < 3 && neighborhood.schools >= 24) {
+//         return true;
+//     }
+//     return 
+//  false;
 
 const neighborhood1 = {
     neighborhood: "Lovely Estates",
@@ -53,7 +59,7 @@ const neighborhood3 = {
     ]
 }
 
-const neighborhood3 = {
+const neighborhood4 = {
     neighborhood: "Ginormous Acres",
     medianHomePrice: 350000,
     pool: true,
@@ -64,7 +70,7 @@ const neighborhood3 = {
         {name: "Middle School", rating: 9},
         {name: "High School", rating: 9}
     ]
-}}
+}};
 
 
 fn(neighborhood1) // returns false due to school rating
@@ -72,6 +78,3 @@ fn(neighborhood2) // returns false due to crime rate
 fn(neighborhood3) // returns true
 fn(neighborhood4) // returns false due to median home price
 
-let neighborhood = { medianHomePrice: 250000, crimeRate: 2, schools: 25 };
-let result = isDesirable(neighborhood);
-console.log(result);
