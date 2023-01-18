@@ -1,154 +1,231 @@
+<!DOCTYPE html>
+<head>
 
+</head>
+<body></body>
 <script>
+
 "use strict";
-//=//================================ WARM UP
+// //=//================================ WARM UP
 
-//Create a function, findAverageDogAge, that takes in a array of pet objects with age properties and returns the average age of a dog.
+// //Create a function, findAverageDogAge, that takes in a array of pet objects with age properties and returns the average age of a dog.
 
-// const pets = [
-// {
-// name: 'Sparky',
-// type: 'Fish',
-// age: 4
-// },
-// {
-// name: 'Mr. Pig',
-// type: 'Cat',
-// age: 4
-// },
-// {
-// name: 'Bubba',
-// type: 'Dog',
-// age: 5
-// },
-// {
-// name: 'Pickles',
-// type: 'Dog',
-// age: 10
-// }
-//
-// ];
-//
-// console.log(findAverageDogAge)(pets) // returns 7.5
+// // const pets = [
+// // {
+// // name: 'Sparky',
+// // type: 'Fish',
+// // age: 4
+// // },
+// // {
+// // name: 'Mr. Pig',
+// // type: 'Cat',
+// // age: 4
+// // },
+// // {
+// // name: 'Bubba',
+// // type: 'Dog',
+// // age: 5
+// // },
+// // {
+// // name: 'Pickles',
+// // type: 'Dog',
+// // age: 10
+// // }
+// //
+// // ];
+// //
+// // console.log(findAverageDogAge)(pets) // returns 7.5
 
-//================================= WARM UP
+// //================================= WARM UP
 
-//Create a function, returnPetsWithNoFish, that takes in a array of pet objects and returns an array of pet objects with no pets of type 'Fish'.
+// //Create a function, returnPetsWithNoFish, that takes in a array of pet objects and returns an array of pet objects with no pets of type 'Fish'.
 
-// const pets = [
-// {
-// name: 'Sparky',
-// type: 'Fish',
-// age: 4
-// },
-// {
-// name: 'Mr. Pig',
-// type: 'Cat',
-// age: 4
-// },
-// {
-// name: 'Bubba',
-// type: 'Dog',
-// age: 5
-// },
-// {
-// name: 'Beans',
-// type: 'Dog',
-// age: 3
-// },
-// {
-// name: 'Mr. Salmon',
-// type: 'Fish',
-// age: 1
-// }
-// ];
-//
-//
-// function returnPetsWithNoFish(pets){
-//     const output =[];
-//     pets.forEach(pet =>
+// // const pets = [
+// // {
+// // name: 'Sparky',
+// // type: 'Fish',
+// // age: 4
+// // },
+// // {
+// // name: 'Mr. Pig',
+// // type: 'Cat',
+// // age: 4
+// // },
+// // {
+// // name: 'Bubba',
+// // type: 'Dog',
+// // age: 5
+// // },
+// // {
+// // name: 'Beans',
+// // type: 'Dog',
+// // age: 3
+// // },
+// // {
+// // name: 'Mr. Salmon',
+// // type: 'Fish',
+// // age: 1
+// // }
+// // ];
+// //
+// //
+// // function returnPetsWithNoFish(pets){
+// //     const output =[];
+// //     pets.forEach(pet =>
+// //     {
+// //         if (pet.type !== 'Fish') {
+// //             output.push(pet);
+// //         }
+// //     });
+// // return output
+// //
+// // }
+// // console.log(returnPetsWithNoFish(pets));
+
+// // returnPetsWithNoFish(pets) // returns...
+// //
+// // [
+// // {
+// // name: 'Mr. Pig',
+// // type: 'Cat',
+// // age: 4
+// // },
+// // {
+// // name: 'Bubba',
+// // type: 'Dog',
+// // age: 5
+// // },
+// // {
+// // name: 'Beans',
+// // type: 'Dog',
+// // age: 3
+// // }
+// // ]
+
+// // ==============Warm up================== #3
+
+
+
+// //Create a function, returnLongestPetName, that takes in a array of pet objects and returns a string of the longest name for a pet.
+
+//     const pets = [
 //     {
-//         if (pet.type !== 'Fish') {
-//             output.push(pet);
-//         }
-//     });
-// return output
-//
-// }
-// console.log(returnPetsWithNoFish(pets));
+//         name: 'Sparky',
+//         type: 'Fish',
+//         age: 4
+//     },
+//     {
+//         name: 'Mr. Pig',
+//         type: 'Cat',
+//         age: 4
+//     },
+//     {
+//         name: 'Bubba',
+//         type: 'Dog',
+//         age: 5
+//     },
+//     {
+//         name: 'Beans',
+//         type: 'Dog',
+//         age: 3
+//     },
+//     {
+//         name: 'Mr. Salmon',
+//         type: 'Fish',
+//         age: 1
+//     }
+// ];
+//  // function returnLongestPetName(pets) {
+//  //     let longestPetName  ="";
+//  //      for (let i=0; i < animals.length; i++){
+//  //          if (animals[i].name.length > longetPetName.length) {
+//  //              longestPetName= animals[i].name;
+//  //          }
+//  //         }
+//  // return petLong;
+//  //
+//  //     });
+//  //     console.log(returnLongestPetName)(pets);
+//  // }           // returns 'Mr. Salmon'
 
-// returnPetsWithNoFish(pets) // returns...
-//
-// [
-// {
-// name: 'Mr. Pig',
-// type: 'Cat',
-// age: 4
-// },
-// {
-// name: 'Bubba',
-// type: 'Dog',
-// age: 5
-// },
-// {
-// name: 'Beans',
-// type: 'Dog',
-// age: 3
-// }
-// ]
+// const returnLongestPetName = (animals) => {
+//     let longestPetName = "";
+//     animals.forEach((animal) => {
+//         if (animal.name.length > longestPetName.length) {
+//             longestPetName = animal.name; }
 
-// ==============Warm up================== #3
+//         })};
+// console.log(returnLongestPetName(pets))
 
 
 
-//Create a function, returnLongestPetName, that takes in a array of pet objects and returns a string of the longest name for a pet.
+function fn(neighborhood) {
+    let schoolRatingTotal = 0;
+    neighborhood.schools.forEach(function (school) {
+        schoolRatingTotal = schoolRatingTotal + school.rating;
+    })
+    return Number(neighborhood.medianHomePrice) < 300000 && neighborhood.crimeRate.toLowerCase() === `low` && schoolRatingTotal >= 24;
+}
 
-    const pets = [
-    {
-        name: 'Sparky',
-        type: 'Fish',
-        age: 4
-    },
-    {
-        name: 'Mr. Pig',
-        type: 'Cat',
-        age: 4
-    },
-    {
-        name: 'Bubba',
-        type: 'Dog',
-        age: 5
-    },
-    {
-        name: 'Beans',
-        type: 'Dog',
-        age: 3
-    },
-    {
-        name: 'Mr. Salmon',
-        type: 'Fish',
-        age: 1
-    }
-];
- // function returnLongestPetName(pets) {
- //     let longestPetName  ="";
- //      for (let i=0; i < animals.length; i++){
- //          if (animals[i].name.length > longetPetName.length) {
- //              longestPetName= animals[i].name;
- //          }
- //         }
- // return petLong;
- //
- //     });
- //     console.log(returnLongestPetName)(pets);
- // }           // returns 'Mr. Salmon'
+// example data...
 
-const returnLongestPetName = (animals) => {
-    let longestPetName = "";
-    animals.forEach((animal) => {
-        if (animal.name.length > longestPetName.length) {
-            longestPetName = animal.name; }
+const neighborhood1 = {
+    neighborhood: "Lovely Estates",
+    medianHomePrice: 280000,
+    pool: true,
+    tennis: false,
+    crimeRate: "low",
+    schools: [
+        {name: "Elementary School", rating: 8},
+        {name: "Middle School", rating: 6},
+        {name: "High School", rating: 8}
+    ]
+};
 
-        })};
-console.log(returnLongestPetName(pets))
-</script>
+const neighborhood2 = {
+    neighborhood: "Luminous Estates",
+    medianHomePrice: 270000,
+    pool: true,
+    tennis: false,
+    crimeRate: "high",
+    schools: [
+        {name: "Elementary School", rating: 8},
+        {name: "Middle School", rating: 8},
+        {name: "High School", rating: 8}
+    ]
+}
+
+const neighborhood3 = {
+    neighborhood: "Oak Mountain",
+    medianHomePrice: 290000,
+    pool: false,
+    tennis: false,
+    crimeRate: "low",
+    schools: [
+        {name: "Elementary School", rating: 8},
+        {name: "Middle School", rating: 8},
+        {name: "High School", rating: 8}
+    ]
+}
+
+const neighborhood4 = {
+    neighborhood: "Ginormous Acres",
+    medianHomePrice: 350000,
+    pool: true,
+    tennis: true,
+    crimeRate: "low",
+    schools: [
+        {name: "Elementary School", rating: 9},
+        {name: "Middle School", rating: 9},
+        {name: "High School", rating: 9}
+    ]
+}
+
+
+console.log(fn(neighborhood1)) // returns false due to school rating
+console.log(fn(neighborhood2)) // returns false due to crime rate
+console.log(fn(neighborhood3)) // returns true
+console.log(fn(neighborhood4)) // returns false due to median home price
+// </script>
+
+</html>

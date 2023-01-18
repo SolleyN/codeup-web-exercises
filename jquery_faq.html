@@ -10,8 +10,9 @@
     
          }.highlight{
             background-color: deepskyblue;
-            width:75%
+            width:50%
          }
+        
             
  </style>
 </head>
@@ -76,27 +77,28 @@
     <li>Enchanted Rock</li>
 </ul>
 </div>
-   <button type ="button"  id="button1"> answer</button>
+   <button type ="button"  id="button1"> Highlight last li</button>
 
  <script src="/js/jquery.js"></script>
 
 
     <script>
+        
 "use strict";
- $('#button2').click(function() {
 
- });
-    $('#button1').click(function() {
-            // $('dd').addClass('invisible')
-            // $('dd').removeClass('invisible')
-            $('dd').toggleClass("invisible");
+
+    $('#button2').click(function() {
+            
+            $('dd').toggleClass("invisible")
+            
+            $('dd').addClass('highlight')
             
         });
     
     $('#button1').click(function(){
         $('ul').each(function(){
             $(this).children('li').last().css('background-color', 'yellow')
-        })
+        });
     });
 
     $('h3').on('click', function(){
