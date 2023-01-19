@@ -159,73 +159,100 @@
 
 
 
-function fn(neighborhood) {
-    let schoolRatingTotal = 0;
-    neighborhood.schools.forEach(function (school) {
-        schoolRatingTotal = schoolRatingTotal + school.rating;
-    })
-    return Number(neighborhood.medianHomePrice) < 300000 && neighborhood.crimeRate.toLowerCase() === `low` && schoolRatingTotal >= 24;
+// function fn(neighborhood) {
+//     let schoolRatingTotal = 0;
+//     neighborhood.schools.forEach(function (school) {
+//         schoolRatingTotal = schoolRatingTotal + school.rating;
+//     })
+//     return Number(neighborhood.medianHomePrice) < 300000 && neighborhood.crimeRate.toLowerCase() === `low` && schoolRatingTotal >= 24;
+// }
+
+// // example data...
+
+// const neighborhood1 = {
+//     neighborhood: "Lovely Estates",
+//     medianHomePrice: 280000,
+//     pool: true,
+//     tennis: false,
+//     crimeRate: "low",
+//     schools: [
+//         {name: "Elementary School", rating: 8},
+//         {name: "Middle School", rating: 6},
+//         {name: "High School", rating: 8}
+//     ]
+// };
+
+// const neighborhood2 = {
+//     neighborhood: "Luminous Estates",
+//     medianHomePrice: 270000,
+//     pool: true,
+//     tennis: false,
+//     crimeRate: "high",
+//     schools: [
+//         {name: "Elementary School", rating: 8},
+//         {name: "Middle School", rating: 8},
+//         {name: "High School", rating: 8}
+//     ]
+// }
+
+// const neighborhood3 = {
+//     neighborhood: "Oak Mountain",
+//     medianHomePrice: 290000,
+//     pool: false,
+//     tennis: false,
+//     crimeRate: "low",
+//     schools: [
+//         {name: "Elementary School", rating: 8},
+//         {name: "Middle School", rating: 8},
+//         {name: "High School", rating: 8}
+//     ]
+// }
+
+// const neighborhood4 = {
+//     neighborhood: "Ginormous Acres",
+//     medianHomePrice: 350000,
+//     pool: true,
+//     tennis: true,
+//     crimeRate: "low",
+//     schools: [
+//         {name: "Elementary School", rating: 9},
+//         {name: "Middle School", rating: 9},
+//         {name: "High School", rating: 9}
+//     ]
+// }
+
+
+// console.log(fn(neighborhood1)) // returns false due to school rating
+// console.log(fn(neighborhood2)) // returns false due to crime rate
+// console.log(fn(neighborhood3)) // returns true
+// console.log(fn(neighborhood4)) // returns false due to median home price
+
+
+// Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
+//
+// ‘a’ or ‘A’ becomes ‘@’
+// ‘i’ or ‘I’ becomes ‘1’
+// ‘s’ or ‘S’ becomes ‘$’
+//
+// encodeStr(‘apple’) // returns ‘@pple’
+// encodeStr(‘codeup’) // returns ‘codeup’
+// encodeStr(‘SASS’) // returns ‘$@$$’
+// encodeStr(‘bike’) // returns ‘b1ke’
+
+// function encodeStr(string){
+//     new_st
+// new_String = string.replace('a', '@').replace('A', '@');
+// new_String = string.replace('i', '@').replace('I', '1');
+// new_String = string.replace('s', '@').replace('S', '$');
+// console.log(new_String);
+// return new_String;
+
+// };
+
+function encodeStr(input) {
+    let str = input.toLowercase();
+  return str.replaceall('a', "@").replaceall('i', "1").replaceall('s', '$');
 }
-
-// example data...
-
-const neighborhood1 = {
-    neighborhood: "Lovely Estates",
-    medianHomePrice: 280000,
-    pool: true,
-    tennis: false,
-    crimeRate: "low",
-    schools: [
-        {name: "Elementary School", rating: 8},
-        {name: "Middle School", rating: 6},
-        {name: "High School", rating: 8}
-    ]
-};
-
-const neighborhood2 = {
-    neighborhood: "Luminous Estates",
-    medianHomePrice: 270000,
-    pool: true,
-    tennis: false,
-    crimeRate: "high",
-    schools: [
-        {name: "Elementary School", rating: 8},
-        {name: "Middle School", rating: 8},
-        {name: "High School", rating: 8}
-    ]
-}
-
-const neighborhood3 = {
-    neighborhood: "Oak Mountain",
-    medianHomePrice: 290000,
-    pool: false,
-    tennis: false,
-    crimeRate: "low",
-    schools: [
-        {name: "Elementary School", rating: 8},
-        {name: "Middle School", rating: 8},
-        {name: "High School", rating: 8}
-    ]
-}
-
-const neighborhood4 = {
-    neighborhood: "Ginormous Acres",
-    medianHomePrice: 350000,
-    pool: true,
-    tennis: true,
-    crimeRate: "low",
-    schools: [
-        {name: "Elementary School", rating: 9},
-        {name: "Middle School", rating: 9},
-        {name: "High School", rating: 9}
-    ]
-}
-
-
-console.log(fn(neighborhood1)) // returns false due to school rating
-console.log(fn(neighborhood2)) // returns false due to crime rate
-console.log(fn(neighborhood3)) // returns true
-console.log(fn(neighborhood4)) // returns false due to median home price
-// </script>
+ </script>
 
 </html>
