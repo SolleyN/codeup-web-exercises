@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<script src="./js/jquery.js"></script>
+<script>
+(function() {
+    "use strict";
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+})();
+
+(function() {
+        "use strict";
+        $(document).ready(function() {
+
+            // TODO: Create an ajax GET request for /data/inventory.json
+
+       var table = $('#insertProducts');
+       var store = $.ajax('data/inventory.json');
+        store.done(function(data){
+            data.forEach(function(item){
+                table.append("<tr>" +
+
+                    "<th>" + item.title + "</th>" +
+                    "<th>" + item.quantity + "</th>" +
+                    "<th>" + item.price + "</th>" +
+                    "<th>" + item.categories + "</th>" +
+
+                    + "</tr>");
+            });
+            console.log(data);
+            console.log(status);
+        });
+
+        // TODO: Take the data from inventory.json and append it to the products table
+        //     {
+        //         type: "GET",
+        //             data:
+        //         {
+        //             title: 'hammer',
+        //                 price : ''
+        //         }
+        //     }
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+
+            $(function() {
+                $("#button").on("click", function() {
+                    $("body").load('#insertProducts');
+                    return false;
+                })
+            })
+
+
+
+
+        });
+    })();
+
+</script>
+
+</body>
+</html>
