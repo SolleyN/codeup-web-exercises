@@ -250,9 +250,13 @@
 // };
 
 function encodeStr(input) {
-    let str = input.toLowercase();
-  return str.replaceall('a', "@").replaceall('i', "1").replaceall('s', '$');
+return input.replace(/a/gi, "@'").replace(/S/g, "$").replace(/i/gi, '1')
 }
- </script>
+console.log('apple');
+console.log('codeup');
+console.log('SASS');
+console.log('bike');
+
+</script>
 
 </html>
