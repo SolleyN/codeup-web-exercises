@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <link href="css/reset.css" rel='stylesheet'/>
+    <!-- Custom CSS -->
+    <style>
+       #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            flex-grow: 1;
+        }
+        header.container {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.78);
+        }
+        main.container, main.container>.row {
+            padding: 0;
+            flex-grow: 1;
+        }
+        aside.column {
+            width: 300px;
+            flex: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My First Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div class="page-wrapper">
+    <header class="container">
+        <div class="row full-width">
+            <div class="column">
+                YOUR LOGO HERE
+            </div>
+            <div class="column">
+
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="row full-width">
+            <aside class="column">
+
+            </aside>
+            <div class="column">
+                <div id='map'></div>
+            </div>
+        </div>
+    </main>
+</div>
+<div id='map'></div>
+
+<!--Keys-->
+
+<script src="/js/keys.js"></script>
+<script src="/js/mapbox-geocoder-utils.js"></script>
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+
+<!-- Custom JS -->
+<script>
+
+   
+//     let alamoPopup = new mapboxgl.Popup()
+// .setHTML("<p> Remember The Alamo!</p>")
+ 
+//     let marker = new mapboxgl.Marker()
+// .setLngLat([-98.4916, 29.4260])
+// .addTo(map);
+
+
+// marker.setPopup(alamoPopup)
+
+// the  geocode method from mapbox-geocoder-utils.js 
+
+// geocode("600 Navarro St #350, San Antonio, TX 78205", keys.mapbox).then(function(result) {
+//         console.log(result);
+//         map.setCenter(result);
+//         map.setZoom(20);
+//     });
+
+  // reverse geocode method from mapbox-geocoder-utils.js
+
+//   reverseGeocode({lng: -98.4861, lat: 29.4260}, keys.mapbox).then(function(results) {
+//         // logs the address for The Alamo
+//         console.log(results);
+//     });
+
+let restaurants = [
+    {
+            name: "Dog and Pony Grill",
+            location: "481 S Main St. Boerne, Texas, 78251",
+
+    },
+    {
+            name: "Yummi Sushi",
+            location: "300 W Bitters Rd #185, San Antonio, TX 78216",
+
+    },
+    {
+        name: "<b>Perry's SteakHouse</b>",
+        location: "15900 La Cantera Pkwy Suite 222000, San Antonio, TX 78256",
+
+    }
+];
+mapboxgl.accessToken = keys.mapbox;
+    let map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 9,
+        center: [-98.4916, 29.4252]
+    });
+
+restaurants.forEach(function(restaurants){
+
+
+        geocode(restaurants.location, keys.mapbox).then(function(result) {
+
+          let markers = new mapboxgl.Marker()
+          .setLngLat([result[0],result[1]])
+          .addTo(map)
+
+          let info = new mapboxgl.Popup()
+            .setHTML(restaurants.location)
+
+          markers.setPopup(info)
+        })
+    });
+</script>
+</body>
+</html>
