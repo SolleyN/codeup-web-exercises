@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!--Map box--->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+<!--Boot Strap--->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+   
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!--Keys JS File--->
+    <script src="js/keys.js"></script>
+
+    <!--Custom Css---->
+    <link href='css/weather_map.css' rel="stylesheet">
+
+    <title>Weather Project</title>
+    </head>
+<body>
+    
+    <main class="">
+    <div class="page-wrapper bg-dark"></div>
+    <div id="container"></div>
+        <div class="  bg-dark sticky-top heading bg-primary text-dark mb-1">
+            <h1> Weather Map</h1><span class ="bi bi-tornado"></span>
+          
+                 <label class="text-light">Enter Location</label>
+                 <input id="location" class="text-dark rounded">
+                 <button id="search" type="submit" class="text-dark rounded">Search City Weather </button>
+                </div>
+                
+                <div class="d-flex">
+                <div id="weather" class="d-flex"></div>
+            </div>
+       
+        <div id="map"></div> 
+    </div>
+       
+</main>
+        
+    </div>
+
+    <!--Custom Js-->
+   <script src ="js/weather_map.js"></script>
+</body>
+</html>

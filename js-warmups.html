@@ -249,13 +249,64 @@
 
 // };
 
-function encodeStr(input) {
-return input.replace(/a/gi, "@'").replace(/S/g, "$").replace(/i/gi, '1')
+// function encodeStr(input) {
+// return input.replace(/a/gi, "@'").replace(/S/g, "$").replace(/i/gi, '1')
+// }
+// console.log('apple');
+// console.log('codeup');
+// console.log('SASS');
+// console.log('bike');
+
+
+
+// Make a function, reverseStrings, that takes in an array of objects and reverses the value of the 'str' properties.
+
+
+const strs = [
+	{
+		id: 1,
+		str: 'hello'
+	},
+	{
+		id: 2,
+		str: 'world'
+	},
+	{
+		id: 3,
+		str: 'codeup'
+	},
+	{
+		id: 4,
+		str: 'x'
+	}
+]
+
+reverseStrings(strs) // returns...
+
+[
+	{
+		id: 1,
+		str: 'olleh'
+	},
+	{
+		id: 2,
+		str: 'dlrow'
+	},
+	{
+		id: 3,
+		str: 'puedoc'
+	},
+	{
+		id: 4,
+		str: 'x'
+	}
+]
+function reverseStrings(strs){
+    
+    strs.forEach(function)(strObj) {
+        strObj.str = (strObj.str.split("").reverse().join("");
+    } return strs;
 }
-console.log('apple');
-console.log('codeup');
-console.log('SASS');
-console.log('bike');
 
 </script>
 

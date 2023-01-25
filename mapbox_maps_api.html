@@ -88,7 +88,7 @@ let restaurants = [
 mapboxgl.accessToken = keys.mapbox;
     let map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
+        style: 'mapbox://styles/mapbox/streets-v11',
         zoom: 9,
         center: [-98.4916, 29.4252]
     });
@@ -99,7 +99,7 @@ restaurants.forEach(function(restaurants){
         geocode(restaurants.location, keys.mapbox).then(function(result) {
 
           let markers = new mapboxgl.Marker()
-          .setLngLat([result[0],result[1]])
+          .setLngLat([result[0], result[1]])
           .addTo(map)
 
           let info = new mapboxgl.Popup()
