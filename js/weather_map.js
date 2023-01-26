@@ -36,7 +36,7 @@ let marker = new mapboxgl.Marker({
     .addTo(map);
 function onDragEnd() {
     map.addControl(geocode);
-    let lngLat = marker.getLngLat()
+   
     
 }
 
