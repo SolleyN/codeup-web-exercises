@@ -64,7 +64,7 @@ geocode(userLocation, keys.mapbox).then(function (result){
   }).done(function(data){
 
       // displays weather of selected location and displays in cards
-      
+
       let html = '';
       for (let i = 0; i < data.list.length; i += 8) {
         
